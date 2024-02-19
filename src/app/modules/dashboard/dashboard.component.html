@@ -1,0 +1,44 @@
+
+<mat-sidenav-container class="app-container" >
+    <mat-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
+        <h2 style="text-align: center; top: 15px; position: relative; font-size: 40px;">Usuario</h2>
+        <h2 style="text-align: center; top: 5px; position: relative; font-size: 11px;">Dashboard Usuario </h2>
+        <mat-nav-list>
+            <mat-expansion-panel [class.mat-elevation-z0]="true" >
+                <mat-expansion-panel-header>
+                 
+
+                    <span class="menu-title">Administración</span>
+
+                </mat-expansion-panel-header>
+                <mat-nav-list class="lista-admin">
+                    <p mat-list-item routerLink="seguridad" >Seguridad</p>
+                   
+                    <p mat-list-item routerLink="catalogos" >Roles </p>
+                  
+                </mat-nav-list>
+            </mat-expansion-panel>
+
+            <mat-expansion-panel [class.mat-elevation-z0]="true">
+                <mat-expansion-panel-header>
+                   
+                    <span class="menu-title">Operaciones</span>
+                </mat-expansion-panel-header>
+                <mat-nav-list class="lista-admin">
+                    <p mat-list-item routerLink="clasificacion-ingresos" >
+                       Control ingresos</p>
+                    <p mat-list-item routerLink="gestion-presupuestos">
+                        Presupuestos</p>
+                    <p mat-list-item routerLink="gestion-estimaciones">Reportes</p>
+                </mat-nav-list>
+            </mat-expansion-panel>
+
+       
+
+
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+       <app-view-users></app-view-users>
+    </mat-sidenav-content>
+</mat-sidenav-container>
