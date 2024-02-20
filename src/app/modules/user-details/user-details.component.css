@@ -1,0 +1,30 @@
+.container{
+    margin: 30px;
+}
+.button{
+    text-align: end;
+
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Divide en tres columnas de igual ancho */
+    gap: 20px; /* Espacio entre los elementos */
+  }
+
+  .grid-container-company{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divide en tres columnas de igual ancho */
+    gap: 20px; /* Espacio entre los elementos */
+  }
+  
+  .grid-item {
+    margin-bottom: 20px; /* Espacio inferior entre los elementos */
+  }
+  
+  .info-user{
+    text-align: center;
+
+  }
+  .info-user img{
+    width: 10%;
+  }

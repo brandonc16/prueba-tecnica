@@ -1,9 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { user } from 'src/app/core/user.model';
 import { userService } from 'src/app/services/user.service';
+import { UserDetailsComponent } from '../user-details/user-details.component';
 
 @Component({
   selector: 'app-view-users',
@@ -28,7 +30,7 @@ export class ViewUsersComponent  implements OnInit{
 
 
  // Constructor del componente, inyectando el servicio reporteService
- constructor(private userService: userService) {}
+ constructor(private userService: userService,private dialog: MatDialog) {}
 
 
  ngOnInit(): void {
@@ -57,7 +59,7 @@ export class ViewUsersComponent  implements OnInit{
     
   }
    // Arreglo de columnas a mostrar en la tabla
- displayedColumns: string[] = [ 'id','name','phone','username', 'website'];
+ displayedColumns: string[] = [ 'id','name','phone','username', 'website', 'ver'];
 
 
  search() {
@@ -77,6 +79,16 @@ export class ViewUsersComponent  implements OnInit{
     user.website.toLowerCase().includes(searchTerm)
   );
   this.dataSource = new MatTableDataSource<user>(filteredData);
+}
+
+
+seeDetails(element: any) {
+  // Aquí puedes implementar la lógica para mostrar el detalle del elemento, por ejemplo, abrir un modal, navegar a otra página, etc.
+  console.log('Ver detalle de:', element);
+  const dialogRef = this.dialog.open(UserDetailsComponent, {
+    width: 'auto', // Ancho del modal
+    data: element // Pasar los detalles del elemento al modal
+  });
 }
 
 }

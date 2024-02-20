@@ -10,13 +10,15 @@ import { MaterialModule } from './material/material.module';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { ViewUsersComponent } from './modules/view-users/view-users.component';
 import { LayoutComponent } from './layout/layout.component';
+import { UserDetailsComponent } from './modules/user-details/user-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     LayoutComponent,
-    ViewUsersComponent
+    ViewUsersComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

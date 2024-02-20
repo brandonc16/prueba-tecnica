@@ -1,0 +1,80 @@
+
+<div class="container">
+
+    <h1>Detalle usuario </h1>
+    <hr><br><br>
+
+    <div class="info-user">
+        <img src="assets/user.jpg" alt="">
+        <div class="grid-item">
+            <mat-label>Nombre</mat-label> <br>
+            <mat-form-field>
+              <input matInput [(ngModel)]="data.name" disabled>
+            </mat-form-field>
+          </div>
+    </div>
+<div class="user-detail">
+   
+    <h2>Dirección</h2>
+    <div class="grid-container">
+        <div class="grid-item">
+          <mat-label>Ciudad</mat-label> <br>
+          <mat-form-field>
+            <input matInput [(ngModel)]="data.address.city" disabled>
+          </mat-form-field>
+        </div>
+      
+        <div class="grid-item">
+          <mat-label>Calle</mat-label><br>
+          <mat-form-field>
+            <input matInput [(ngModel)]="data.address.street" disabled>
+          </mat-form-field>
+        </div>
+      
+        <div class="grid-item">
+          <mat-label>Número</mat-label><br>
+          <mat-form-field>
+            <input matInput [(ngModel)]="data.address.suite" disabled>
+          </mat-form-field>
+        </div>
+        <div class="grid-item">
+            <mat-label>Codigo Postal</mat-label><br>
+            <mat-form-field>
+              <input matInput [(ngModel)]="data.address.zipcode" disabled>
+            </mat-form-field>
+          </div>
+      </div>
+
+      <h2>Empresa</h2>
+      <div class="grid-container-company">
+        <div class="grid-item">
+          <mat-label>Nombre</mat-label> <br>
+          <mat-form-field style="width: 320px;">
+            <input matInput [(ngModel)]="data.company.name" disabled>
+          </mat-form-field>
+        </div>
+      
+        <div class="grid-item">
+          <mat-label>Frase</mat-label><br>
+          <mat-form-field style="width: 320px;">
+            <input matInput [(ngModel)]="data.company.catchPhrase" disabled>
+          </mat-form-field>
+        </div>
+      
+        <div class="grid-item">
+          <mat-label>BS</mat-label><br>
+          <mat-form-field style="width: 320px;">
+            <input matInput [(ngModel)]="data.company.bs" disabled>
+          </mat-form-field>
+        </div>
+       
+      </div>
+      
+     
+</div>
+  
+
+    <div class="button">
+        <button mat-button (click)="cerrarModal()">Cerrar</button>
+    </div>
+</div>

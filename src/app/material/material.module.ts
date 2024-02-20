@@ -11,8 +11,10 @@ import { MatListModule } from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatTableModule } from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSort, MatSortModule} from '@angular/material/sort';
+import { MatSortModule} from '@angular/material/sort';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -32,6 +34,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatPaginatorModule,
     MatSortModule,
     MatProgressSpinnerModule,
+    MatDialogModule,
+    MatGridListModule
+    
 
   ],
   exports:[
@@ -48,7 +53,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    MatGridListModule
 
   ]
  
